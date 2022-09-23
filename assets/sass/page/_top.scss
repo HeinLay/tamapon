@@ -1,0 +1,1660 @@
+/* ========================================================
+ styles for front page
+======================================================== */
+// mv-sec
+.mv-sec {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+
+  @include mq() {
+    width: 95%;
+    max-width: 1500px;
+  }
+
+  .mv-sec-inner {
+    position: relative;
+
+    @include mq(sp) {
+      margin: 0 auto;
+      padding: 13.333vw 0 12vw;
+    }
+
+    @include mq() {
+      width: 55%;
+      margin: 6rem auto 0;
+      padding: 4.7rem 0 12rem;
+    }
+
+  }
+
+  .mv-sec-ttl {
+    line-height: 1.6;
+    color: $color01;
+
+    @include mq(sp) {
+      margin-bottom: 5.2vw;
+      font-size: 3.733vw;
+    }
+
+    @include mq() {
+      margin-bottom: 2rem;
+      font-size: 2.6rem;
+    }
+
+    .mv-ttl-icn {
+      display: block;
+
+      @include mq(sp) {
+        width: 14vw;
+        margin: 0 auto 2.533vw;
+      }
+    }
+
+  }
+
+  .mv-txt {
+    line-height: 1.7;
+    color: $black;
+    font-weight: 700;
+
+    @include mq(sp) {
+      background: url("#{$v-img-path}top/mv_txt_bg.png") no-repeat bottom 5.333vw center;
+      background-size: 67.867vw;
+      font-size: 4.267vw;
+    }
+
+    @include mq() {
+      background: url("#{$v-img-path}top/mv_txt_bg.png") no-repeat bottom center;
+      font-size: 3.6rem;
+    }
+
+    .mv-txt-sm {
+      display: block;
+      color: $color02;
+      font-weight: 400;
+
+      @include mq(sp) {
+        margin-top: 8.533vw;
+        font-size: 3.733vw;
+      }
+
+      @include mq() {
+        margin-top: 3rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .mv-img01 {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    @include mq(sp) {
+      left: -2vw;
+      width: 26.667vw;
+    }
+
+    @include mq() {
+      left: 0;
+    }
+  }
+
+  .mv-img02 {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    @include mq(sp) {
+      right: -2vw;
+      width: 26.667vw;
+    }
+
+    @include mq() {
+      right: 0;
+    }
+  }
+
+}
+
+//menu-sec
+.menu-sec {
+  position: relative;
+  z-index: 1;
+
+  @include mq(sp) {
+    padding: 0 5.333vw;
+    padding-bottom: 19.2vw;
+    background: url("#{$v-img-path}top/menu_bg_sp.png") no-repeat top 20px center;
+    background-size: auto 90%;
+  }
+
+  @include mq() {
+    margin-top: -7rem;
+    padding-bottom: 13.5rem;
+    background: url("#{$v-img-path}top/menu_sec_bg.png") no-repeat top 20px center;
+    background-size: 100% 97%;
+  }
+
+
+  .menu-tile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq(sp) {
+      margin: 8.8vw 0 0;
+    }
+
+    @include mq() {
+      width: 84.3%;
+      margin: 8rem auto 0;
+      padding-left: 4rem;
+    }
+
+    .menu-slide {
+      position: relative;
+
+      @include mq(sp) {
+        width: 42.8vw;
+        height: 22.933vw;
+        margin-right: 3.733vw;
+        margin-bottom: 5.733vw;
+      }
+
+      @include mq() {
+        width: 575px;
+        height: 181px;
+        margin-right: 9rem;
+        margin-bottom: 4.5rem;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        box-shadow: 0px 10px 30px rgba(50, 50, 50, 0.2);
+        -webkit-box-shadow: 0px 10px 30px rgba(50, 50, 50, 0.2);
+        -moz-box-shadow: 0px 10px 30px rgba(50, 50, 50, 0.2);
+        content: "";
+        border-radius: 10px;
+        @include mq(sp) {
+          height: 70px;
+        }
+        @include mq() {
+          height: 124px;
+        }
+      }
+
+      &:hover {
+        &:after {
+          opacity: 0;
+        }
+      }
+
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+
+      .slide-ttl {
+        position: relative;
+        text-align: center;
+
+        @include mq(sp) {
+          margin-bottom: 2.933vw;
+          padding: 2vw 0;
+        }
+
+        @include mq() {
+          margin-bottom: 1.5rem;
+          padding: 1rem 0 1.5rem;
+        }
+
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          content: "";
+          transform: translateX(-50%);
+
+          @include mq(sp) {
+            width: 1.733vw;
+            height: 1.067vw;
+          }
+
+          @include mq() {
+            width: 16px;
+            height: 10px;
+          }
+        }
+
+        .icn-img {
+          @include mq(sp) {
+            width: 4vw;
+            margin: 0 auto;
+          }
+        }
+
+        .ttl-txt {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+
+          @include mq(sp) {
+            width: 3.733vw;
+          }
+        }
+      }
+
+      &.slide-about {
+        @include mq(sp) {
+          background: url("#{$v-img-path}top/menu_about_bg_sp.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        @include mq() {
+          background: url("#{$v-img-path}top/menu_about_bg.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        .slide-ttl {
+          @include mq(sp) {
+            margin-bottom: 1.067vw;
+          }
+
+          &::before {
+            background: url("#{$v-img-path}icon/about_arrow_icn.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+      }
+
+      &.slide-merit {
+
+        @include mq(sp) {
+          background: url("#{$v-img-path}top/menu_merit_bg_sp.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        @include mq() {
+          background: url("#{$v-img-path}top/menu_merit_bg.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        .slide-ttl {
+          @include mq(sp) {
+            margin-bottom: 2.8vw;
+          }
+
+          &::before {
+            background: url("#{$v-img-path}icon/merit_arrow_icn.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+
+      }
+
+
+      &.slide-flow {
+
+        @include mq(sp) {
+          background: url("#{$v-img-path}top/menu_flow_bg_sp.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        @include mq() {
+          background: url("#{$v-img-path}top/menu_flow_bg.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        .slide-ttl {
+          &::before {
+            background: url("#{$v-img-path}icon/flow_arrow_icn.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+      }
+
+      &.slide-faq {
+
+        @include mq(sp) {
+          background: url("#{$v-img-path}top/menu_faq_bg_sp.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        @include mq() {
+          background: url("#{$v-img-path}top/menu_faq_bg.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+
+        .slide-ttl {
+          &::before {
+            background: url("#{$v-img-path}icon/faq_arrow_icn.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+
+      }
+
+      .menu-item {
+
+        font-weight: 700;
+        text-align: center;
+
+        @include mq(sp) {
+          line-height: 1.2;
+          font-size: 3.733vw;
+        }
+
+        @include mq() {
+          font-size: 2.8rem;
+        }
+
+        .light-font {
+          font-weight: 400;
+        }
+
+      }
+
+      .menu-about-item {
+
+        @include mq() {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+
+        @include mq(sp) {
+          img {
+            width: 30.667vw;
+            margin: 0 auto;
+          }
+        }
+
+        span {
+          @include mq(sp) {
+            display: block;
+            font-size: 3.733vw;
+            text-align: center;
+          }
+
+          @include mq() {
+            padding-bottom: 1rem;
+            font-size: 2.4rem;
+
+          }
+        }
+      }
+
+      .menu-merit-item {
+
+        @include mq(sp) {
+          font-size: 2.133vw;
+        }
+
+        @include mq() {
+          font-size: 2.4rem;
+        }
+
+        .num {
+          @include mq(sp) {
+            font-size: 4.533vw;
+          }
+
+          @include mq() {
+            font-size: 4rem;
+          }
+        }
+
+        .bdr-line {
+          display: inline-block;
+          position: relative;
+
+          &::before,
+          &::after {
+            display: inline-block;
+            position: relative;
+            background-color: $color03;
+            content: "";
+            border-radius: 100px;
+
+            @include mq(sp) {
+              top: 0.933vw;
+              width: 0.4vw;
+              height: 3.867vw;
+            }
+
+            @include mq() {
+              top: 7px;
+              width: 3px;
+              height: 29px;
+            }
+          }
+
+          &::before {
+            transform: rotate(-30deg);
+
+            @include mq(sp) {
+              margin-right: 2.667vw;
+            }
+
+            @include mq() {
+              margin-right: 2rem;
+            }
+          }
+
+          &::after {
+            transform: rotate(30deg);
+
+            @include mq(sp) {
+              margin-left: 2.667vw;
+            }
+
+            @include mq() {
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//about-sec
+
+.about-sec {
+  position: relative;
+  background: url("#{$v-img-path}top/about_bg.png") no-repeat center;
+  background-size: 100% 100%;
+
+  @include mq(sp) {
+    margin-top: -16.667vw;
+    padding: 0 5.333vw;
+  }
+
+  @include mq() {
+    margin-top: -10rem;
+  }
+
+  .about-sec-ttl {
+    position: relative;
+    z-index: 2;
+    color: $black;
+
+    @include mq(sp) {
+      margin-bottom: 12vw;
+      font-size: 3.533vw;
+    }
+
+    @include mq() {
+      font-size: 2.6rem;
+    }
+
+    .ttl-icn {
+
+      @include mq(sp) {
+        width: 38.8vw;
+        height: 33.467vw;
+        margin: 0 auto 4.667vw;
+      }
+
+      @include mq() {
+        margin-bottom: 6rem;
+      }
+    }
+
+    .ttl-sm {
+
+      @include mq(sp) {
+        font-size: 5.333vw;
+      }
+
+      @include mq() {
+        font-size: 3.6rem;
+      }
+
+    }
+
+    .ttl-bdr {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+
+      &::before,
+      &::after {
+        display: inline-block;
+        background-color: $black;
+        content: "";
+        border-radius: 100px;
+
+        @include mq(sp) {
+          width: 0.267vw;
+          height: 8vw;
+        }
+
+        @include mq() {
+          width: 2px;
+          height: 60px;
+        }
+
+      }
+
+      &::before {
+
+        transform: rotate(-27deg);
+
+        @include mq(sp) {
+          margin-right: 4.4vw;
+        }
+
+        @include mq() {
+          margin-right: 3rem;
+        }
+      }
+
+      &::after {
+        transform: rotate(27deg);
+
+        @include mq(sp) {
+          margin-left: 4.4vw;
+        }
+
+        @include mq() {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+
+  .about-sub-ttl {
+    color: $color12;
+    text-align: center;
+
+    @include mq(sp) {
+      margin-bottom: 8.667vw;
+      font-size: 5.333vw;
+    }
+
+    @include mq() {
+      margin-bottom: 5.5rem;
+      font-size: 3.6rem;
+    }
+
+    .sub-ttl-icn {
+      margin-bottom: 1rem;
+
+      @include mq(sp) {
+        width: 5.467vw;
+        margin: 0 auto 1rem;
+      }
+    }
+  }
+
+  .about-blk {
+    position: relative;
+    margin: 0 auto;
+
+    @include mq() {
+      width: 84.3%;
+      max-width: 1280px;
+    }
+
+    .about-img-blk {
+      @include mq(sp) {
+        margin-bottom: 13.333vw;
+      }
+    }
+
+    .about-tampo-img {
+      position: relative;
+      width: 100%;
+
+      @include mq(sp) {
+        width: 67.867vw;
+        margin: 0 auto;
+        margin-top: -4vw;
+      }
+
+      @include mq() {
+        padding: 13rem 0 7rem 1rem;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .product-img,
+    .user-img {
+
+      @include mq(sp) {
+        position: relative;
+        width: 41.067vw;
+      }
+
+      @include mq() {
+        position: absolute;
+      }
+
+    }
+
+    .img-item {
+      @include mq(sp) {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        z-index: 1;
+      }
+    }
+
+    .product-img {
+      @include mq() {
+        left: 2.5rem;
+      }
+
+      .about-part {
+
+        @include mq(sp) {
+          top: -2rem;
+          left: 0;
+        }
+
+        @include mq() {
+          top: -3rem;
+          left: -1.5rem;
+        }
+      }
+    }
+
+    .user-img {
+
+      @include mq() {
+        right: 2.5rem;
+      }
+
+      .about-part {
+
+        @include mq(sp) {
+          top: -2rem;
+          right: 0;
+        }
+
+        @include mq() {
+          top: -2rem;
+          right: -1.5rem;
+        }
+
+      }
+    }
+
+    .about-part {
+      position: absolute;
+
+      .part-circle {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.4;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 100px;
+
+        @include mq(sp) {
+          width: 17.6vw;
+          height: 17.6vw;
+          font-size: 3.733vw;
+        }
+
+        @include mq() {
+          width: 153px;
+          height: 153px;
+          font-size: 2.2rem;
+        }
+
+        &.product {
+          background: $color01;
+
+          &::before {
+            background: url("#{$v-img-path}icon/product_part_icn.png") no-repeat center;
+            background-size: contain;
+
+            @include mq(sp) {
+              left: 0;
+            }
+
+            @include mq() {
+              left: -0.8rem;
+            }
+          }
+        }
+
+        &.user {
+          background: $color10;
+
+          &::before {
+            background: url("#{$v-img-path}icon/user_part_icn.png") no-repeat center;
+            background-size: contain;
+
+            @include mq(sp) {
+              right: 0;
+            }
+
+            @include mq() {
+              right: -0.8rem;
+            }
+          }
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+
+          @include mq(sp) {
+            top: -1.333vw;
+            width: 4.8vw;
+            height: 3.333vw;
+          }
+
+          @include mq() {
+            top: -1rem;
+            width: 47px;
+            height: 37px;
+          }
+        }
+      }
+
+    }
+
+    .about-txt-slide {
+      line-height: 1.8;
+      color: $color16;
+      text-align: center;
+
+      @include mq(sp) {
+        margin-bottom: 17.333vw;
+        font-size: 3.733vw;
+      }
+
+      @include mq() {
+        margin-bottom: 8rem;
+      }
+
+      .about-txt {
+        @include mq(sp) {
+          margin-bottom: 6.667vw;
+        }
+
+        @include mq() {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+
+  .youtube-blk {
+
+    @include mq(sp) {
+      margin-bottom: 13.333vw;
+    }
+
+    @include mq() {
+      margin: 0 auto 9.5rem;
+      max-width: 1000px;
+    }
+
+    .tampo-info {
+      line-height: 1.6;
+      color: $color12;
+      font-weight: 700;
+      text-align: center;
+
+      @include mq(sp) {
+        margin-bottom: 8.667vw;
+        font-size: 4.267vw;
+      }
+
+      @include mq() {
+        margin-bottom: 6rem;
+        font-size: 2rem;
+      }
+
+      .info-txt {
+
+        @include mq(sp) {
+          margin-bottom: 6.133vw;
+        }
+
+        @include mq() {
+          margin-bottom: 3rem;
+
+        }
+      }
+    }
+
+    .video {
+
+      @include mq(sp) {
+        margin-bottom: 9.733vw;
+      }
+
+      @include mq() {
+        margin-bottom: 7.5rem;
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+
+        @include mq(sp) {
+          height: 50vw;
+        }
+      }
+    }
+  }
+
+  .more-info-box {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20px;
+
+    @include mq(sp) {
+      padding: 3.067vw 5.333vw 5.067vw;
+      border: 4px solid $color12;
+      background-image: url("#{$v-img-path}top/more_info_bg_sp.png");
+      background-size: 100% 55%;
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+
+    @include mq() {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.3rem 7.8rem 2.3rem 4.5rem;
+      border: 2px solid $color12;
+      background-image: url("#{$v-img-path}top/more_info_bg.png");
+      background-size: 50%;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+
+    .tamapon-item {
+      text-align: center;
+
+      @include mq(sp) {
+        width: 70vw;
+        margin-bottom: 8vw;
+        margin-left: 1.333vw;
+        
+        img {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      @include mq() {
+        width: 328px;
+      }
+
+      span {
+        color: $color16;
+
+        @include mq(sp) {
+          margin-left: 9vw;
+          font-size: 2.4vw;
+        }
+
+        @include mq() {
+          margin-left: 3rem;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .about-btn-blk {
+    background: $white;
+
+    @include mq(sp) {
+      padding-top: 6vw;
+      text-align: center;
+    }
+
+    @include mq() {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3rem;
+    }
+
+    .button--bubble__container{
+      &:first-of-type {
+        margin-bottom: 4.933vw;
+      }
+    }
+
+    .btn {
+
+      &.contact-btn {
+        span {
+
+          @include mq(sp) {
+            padding-left: 9.333vw;
+          }
+
+          @include mq() {
+            padding-left: 5rem;
+          }
+
+          &::before {
+
+            @include mq(sp) {
+              width: 4.667vw;
+              height: 3.467vw;
+            }
+
+            @include mq() {
+              width: 28px;
+              height: 21px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+//merit-sec 
+
+.merit-sec {
+
+  @include mq(sp) {
+    padding: 0 5.333vw;
+    background: url("#{$v-img-path}top/merit_sec_bg_sp.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  @include mq() {
+    padding-bottom: 4rem;
+    background: url("#{$v-img-path}top/merit_sec_bg.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .merit-sec-ttl {
+    line-height: 1.4;
+    color: $black;
+
+    @include mq(sp) {
+      margin-bottom: 10.667vw;
+      font-size: 4.267vw;
+    }
+
+    @include mq() {
+      margin-bottom: 9rem;
+      font-size: 2.6rem;
+    }
+
+    .ttl-icn {
+
+      @include mq(sp) {
+        width: 18.533vw;
+        margin: 0 auto 2.933vw;
+      }
+
+      @include mq() {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .ttl-sm {
+
+      @include mq(sp) {
+        margin-top: 2vw;
+        font-size: 5.6vw;
+      }
+
+      @include mq() {
+        margin-top: 1.5rem;
+        font-size: 3.6rem;
+      }
+    }
+  }
+
+  .merit-blk {
+    margin: 0 auto;
+
+    @include mq() {
+      width: 84.3%;
+      padding-left: 5rem;
+      max-width: 1280px;
+    }
+
+    .merit-tile {
+      @include mq(sp) {
+        padding-bottom: 24vw;
+      }
+
+      @include mq() {
+        display: flex;
+        margin-bottom: 6rem;
+      }
+
+      .merit-img {
+        position: relative;
+
+        @include mq(sp) {
+          margin-bottom: 2.133vw;
+          img {
+            width: 100%;
+          }
+        }
+
+        @include mq() {
+          margin-top: 2.5rem;
+        }
+      }
+
+      .merit-item {
+        position: relative;
+
+        .merit-sub-ttl {
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          background: $color13;
+          color: $black;
+          font-weight: 700;
+
+          @include mq(sp) {
+            line-height: 1.4;
+            margin-bottom: 3.2vw;
+            padding: 1.6vw 5.333vw 2vw;
+            font-size: 4.267vw;
+            border-radius: 100px;
+          }
+
+          @include mq() {
+            height: 70px;
+            margin-bottom: 3rem;
+            padding-left: 6rem;
+            font-size: 2.7rem;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+          }
+        }
+
+        .merit-slide {
+          line-height: 1.6;
+
+          @include mq(sp) {
+            margin-bottom: 10.667vw;
+            font-size: 3.467vw;
+          }
+
+          @include mq() {
+            margin-bottom: 5rem;
+            margin-left: 6rem;
+          }
+
+          .slide-ttl {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            color: $color14;
+            font-weight: 700;
+            border-bottom: 1px solid $color14;
+
+            @include mq(sp) {
+              font-size: 4vw;
+            }
+
+            @include mq() {
+              font-size: 2.8rem;
+            }
+
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.merit-slide-mb {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+
+      .merit-part {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background: $color14;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 100px;
+
+        @include mq(sp) {
+          top: -2rem;
+          left: 2rem;
+          width: 21.333vw;
+          height: 21.333vw;
+        }
+
+        @include mq() {
+          top: -6rem;
+          right: -3rem;
+          width: 160px;
+          height: 160px;
+        }
+
+        .part-txt {
+          @include mq(sp) {
+            font-size: 4vw;
+          }
+
+          @include mq() {
+            font-size: 3rem;
+          }
+        }
+
+        .part-no {
+          display: block;
+          position: relative;
+
+          @include mq(sp) {
+            padding-top: 2vw;
+            font-size: 6.8vw;
+          }
+
+          @include mq() {
+            padding-top: 2rem;
+            font-size: 5.1rem;
+          }
+
+          &::before {
+            position: absolute;
+            background: url("#{$v-img-path}icon/merit_part_icn.png") no-repeat center;
+            background-size: contain;
+            content: "";
+
+            @include mq(sp) {
+              top: 0.3rem;
+              left: -1.5rem;
+              width: 3.867vw;
+              height: 3.733vw;
+            }
+
+            @include mq() {
+              top: 1.3rem;
+              left: -2.5rem;
+              width: 29px;
+              height: 28px;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+.cmn-white-bg {
+  background: url("#{$v-img-path}top/cmn_white_bg.png") repeat-y center;
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+.contact-sec {
+  box-sizing: border-box;
+
+  @include mq(sp) {
+    padding: 7.2vw 10.666vw 13.333vw;
+  }
+
+  @include mq() {
+    padding: 6.5rem 0 11rem;
+  }
+}
+
+//flow-sec 
+
+.flow-sec {
+
+  @include mq(sp) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5.333vw;
+  }
+
+  @include mq() {
+    width: 84.3%;
+    margin: 0 auto 8rem;
+    max-width: 1280px;
+  }
+
+  .flow-sec-ttl {
+    color: $color01;
+
+    @include mq(sp) {
+      margin-bottom: 12vw;
+    }
+
+    @include mq() {
+      margin-bottom: 7rem;
+    }
+
+    .ttl-icn {
+      margin-bottom: 0.5rem;
+
+      @include mq(sp) {
+        width: 6.4vw;
+        margin: 0 auto;
+      }
+
+    }
+
+  }
+
+  .flow-blk {
+
+    .flow-slide {
+      position: relative;
+
+      @include mq(sp) {
+        padding-bottom: 12vw;
+      }
+
+      @include mq() {
+        padding-bottom: 8rem;
+      }
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 30px;
+        background: $color06;
+        content: "";
+        transform: translateX(-50%);
+
+        @include mq(sp) {
+          height: 12vw;
+        }
+
+        @include mq() {
+          height: 80px;
+        }
+      }
+
+      &:last-child {
+        &::before {
+          content: none;
+        }
+      }
+
+      &.slide1 {
+        .flow-img {
+          @include mq(sp) {
+            top: -5.6vw;
+            width: 23.2vw;
+          }
+        }
+
+        .sub-ttl-icn {
+          @include mq(sp) {
+            img {
+              width: 5.6vw;
+            }
+          }
+        }
+      }
+
+      &.slide2 {
+        .flow-img {
+          @include mq(sp) {
+            top: -4.533vw;
+            width: 26vw;
+          }
+        }
+
+        .sub-ttl-icn {
+          @include mq(sp) {
+            img {
+              width: 7.333vw;
+            }
+          }
+        }
+      }
+
+      &.slide3 {
+        .flow-img {
+          @include mq(sp) {
+            top: -2.667vw;
+            width: 25.733vw;
+          }
+        }
+
+        .sub-ttl-icn {
+          @include mq(sp) {
+            img {
+              width: 6.133w;
+            }
+          }
+        }
+      }
+
+      &.slide4 {
+        .flow-img {
+          @include mq(sp) {
+            top: -4vw;
+            width: 22.133vw;
+          }
+        }
+
+        .sub-ttl-icn {
+          @include mq(sp) {
+            img {
+              width: 5.333vw;
+            }
+          }
+        }
+      }
+
+      &.slide5 {
+        .flow-img {
+          @include mq(sp) {
+            top: -3.733vw;
+            width: 23.6vw;
+          }
+        }
+
+        .sub-ttl-icn {
+          @include mq(sp) {
+            img {
+              width: 4.533vw;
+            }
+          }
+        }
+      }
+
+      .flow-slide-bdr {
+        position: relative;
+        border: 5px solid $color04;
+        box-sizing: border-box;
+        background: $white;
+        border-radius: 20px;
+      }
+
+      .flow-sub-ttl {
+        display: flex;
+        align-items: center;
+        color: $color01;
+        font-weight: 700;
+
+        @include mq(sp) {
+          margin: 4.267vw 0 3.2vw 6.667vw;
+          font-size: 4.267vw;
+        }
+
+        @include mq() {
+          margin: 3.5rem 0 2rem 6rem;
+          font-size: 3rem;
+        }
+
+        .sub-ttl-icn {
+
+          @include mq(sp) {
+            width: 10%;
+
+            img {
+              margin: 0;
+            }
+          }
+
+          @include mq() {
+            width: 5%;
+          }
+        }
+      }
+
+      .flow-item {
+        display: flex;
+        align-items: center;
+        line-height: 1.8;
+        box-sizing: border-box;
+        background: $color05;
+        font-weight: 700;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        @include mq(sp) {
+          padding: 4vw 5.333vw;
+          font-size: 3.733vw;
+        }
+
+        @include mq() {
+          height: 120px;
+          padding-left: 6rem;
+        }
+      }
+
+      .slide-num {
+        position: absolute;
+        background: $white;
+        color: $color01;
+        font-weight: 700;
+
+        @include mq(sp) {
+          top: -1rem;
+          left: 5.333vw;
+          padding: 0 1.333vw;
+          font-size: 5.067vw;
+        }
+
+        @include mq() {
+          top: -3rem;
+          left: 4.5rem;
+          padding: 0 2rem;
+          font-size: 4.8rem;
+        }
+      }
+
+      .flow-img {
+        position: absolute;
+
+        @include mq(sp) {
+          right: 5.333vw;
+        }
+
+        @include mq() {
+          top: -4.8rem;
+          right: 4rem;
+        }
+      }
+
+    }
+  }
+}
+
+//faq-sec 
+
+.faq-sec {
+  margin: 0 auto;
+
+  @include mq(sp) {
+    padding: 0 5.333vw 15.333vw;
+  }
+
+  @include mq() {
+    width: 65.85%;
+    padding-bottom: 14.5rem;
+    max-width: 1000px;
+  }
+
+  .faq-sec-ttl {
+    margin-bottom: 4rem;
+    color: $black;
+  }
+
+  .faq-blk {
+    margin: 0 auto;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+
+    @include mq() {
+      width: 100%;
+      margin-bottom: 10rem;
+    }
+
+    .faq-blog {
+      text-align: justify;
+      border-bottom: 2px solid $color07;
+
+      @include mq(sp) {
+        margin-bottom: 4vw;
+      }
+
+      @include mq() {
+        margin-bottom: 3rem;
+      }
+
+      .ques-item {
+        display: flex;
+        position: relative;
+        align-items: center;
+        box-sizing: border-box;
+
+        @include mq(sp) {
+          line-height: 1.6;
+          margin-bottom: 3.333vw;
+          padding: 0 5.333vw 0 0;
+          font-size: 3.2vw;
+        }
+
+        @include mq() {
+          margin-bottom: 1.5rem;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          background: url("#{$v-img-path}icon/plus_icn.png") no-repeat center;
+          background-size: contain;
+          font-weight: 700;
+          content: "";
+          transform: translateY(-50%);
+
+          @include mq(sp) {
+            right: 0;
+            width: 3.6vw;
+            height: 3.6vw;
+          }
+
+          @include mq() {
+            right: 1.5rem;
+            width: 27px;
+            height: 27px;
+          }
+        }
+
+        &.active {
+          &:after {
+            background: url("#{$v-img-path}icon/minus_icn.png") no-repeat center;
+            background-size: contain;
+
+          }
+        }
+      }
+
+      .ques-icon,
+      .ans-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        border-radius: 100px;
+
+        @include mq(sp) {
+          width: 8.667vw;
+          height: 8.667vw;
+          margin-right: 3.067vw;
+          font-size: 3.733vw;
+        }
+
+        @include mq() {
+          width: 65px;
+          height: 65px;
+          font-size: 3rem;
+          font-weight: 700;
+        }
+      }
+
+      .ques-icon {
+        background: $color07;
+
+        @include mq() {
+          margin-right: 2.5rem;
+        }
+      }
+
+      .ans-icon {
+        background: $color09;
+
+        @include mq() {
+          margin-right: 2rem;
+        }
+      }
+
+      .ans-item {
+        display: none;
+        background: $color08;
+
+        @include mq(sp) {
+          margin-bottom: 3.533vw;
+          padding: 5.333vw 4vw;
+          font-size: 3.2vw;
+        }
+
+        @include mq() {
+          margin-bottom: 2rem;
+          padding: 2.5rem 4.5rem 3rem 5.5rem;
+          font-size: 1.6rem;
+        }
+
+        .ans-slide {
+          display: flex;
+
+          .ans-txt {
+            flex: 1;
+          }
+
+          p {
+            line-height: 1.6;
+            margin-bottom: 2rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  // .contact-btn {
+  //   @include mq(sp) {
+  //     width: calc(100% - 10.6333vw);
+  //     margin: 0 5.333vw;
+  //   }
+  // }
+}

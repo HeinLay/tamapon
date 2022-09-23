@@ -1,0 +1,42 @@
+/* ========================================================
+scroll
+======================================================== */
+.totop-btn a {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  color: $color01;
+  font-weight: 700;
+  text-decoration: none;
+
+  @include mq(sp) {
+    right: 5.333vw;
+    width: 13.333vw;
+    font-size: 2.933vw;
+  }
+
+  @include mq() {
+    right: 0;
+    width: 60px;
+    font-size: 1.4rem;
+  }
+
+  .arrow-icn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    background: $color12;
+    border-radius: 100px;
+
+    @include mq(sp) {
+      width: 13.333vw;
+      height: 13.333vw;
+    }
+
+    @include mq() {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

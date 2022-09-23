@@ -1,0 +1,43 @@
+/* ========================================================
+header
+======================================================== */
+.header {
+  position: relative;
+  box-sizing: border-box;
+
+  @include mq(sp) {
+    .header-theme-pc {
+      display: none;
+    }
+
+    .header-theme-sp {
+      position: relative;
+      z-index: 999;
+      width: 100%;
+      padding: 5.333vw 6vw 1.733vw;
+      box-sizing: border-box;
+    }
+
+    .site-logo {
+      width: 49.733vw;
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+  }
+
+  @include mq() {
+    padding: 4rem 4.5rem 0;
+
+    .header-theme-sp {
+      display: none;
+    }
+
+  }
+
+  a {
+    display: block;
+  }
+}

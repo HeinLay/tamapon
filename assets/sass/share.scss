@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* =======================================================
+*  share.css
+* ======================================================= */
+/* import
+-------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+@import "base/config";
+@import "base/base";
+@import "base/general";
+@import "library/aos";
+@import "layout/header";
+@import "layout/footer";
+@import "module/scroll";
+@import "module/part";
+@import "page/top";
