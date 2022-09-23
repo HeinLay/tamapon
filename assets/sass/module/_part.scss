@@ -9,9 +9,16 @@
     left: 0;
     width: 100%;
     height: 1095px;
-    background: url("#{$v-img-path}top/wrapper_bg.png") center no-repeat;
-    background-size: 100% 100%;
+    background: url("#{$v-img-path}top/wrapper_bg.png") repeat-y;
+    background-position: center top;
     content: "";
+
+    @include mq(sp) {
+      background-size: cover;
+    }
+    @include mq() {
+      background-size: contain;
+    }
   }
 
 }
@@ -41,7 +48,7 @@
     color: $black;
 
     @include mq(sp) {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       font-size: 3.733vw;
     }
 

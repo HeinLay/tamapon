@@ -59,7 +59,7 @@
     font-weight: 700;
 
     @include mq(sp) {
-      background: url("#{$v-img-path}top/mv_txt_bg.png") no-repeat bottom 5.333vw center;
+      background: url("#{$v-img-path}top/mv_txt_bg.png") no-repeat bottom 7.8vw center;
       background-size: 67.867vw;
       font-size: 4.267vw;
     }
@@ -126,8 +126,8 @@
   @include mq(sp) {
     padding: 0 5.333vw;
     padding-bottom: 19.2vw;
-    background: url("#{$v-img-path}top/menu_bg_sp.png") no-repeat top 20px center;
-    background-size: auto 90%;
+    background: url("#{$v-img-path}top/menu_bg_sp.png") no-repeat top 2.667vw center;
+    background-size: auto 96vw;
   }
 
   @include mq() {
@@ -466,15 +466,18 @@
 
 .about-sec {
   position: relative;
-  background: url("#{$v-img-path}top/about_bg.png") no-repeat center;
-  background-size: 100% 100%;
+  background-position: top center;
 
   @include mq(sp) {
+    background: url("#{$v-img-path}top/cmn_white_bg.png") repeat-y;
+    background-size: cover;
     margin-top: -16.667vw;
     padding: 0 5.333vw;
   }
 
   @include mq() {
+    background: url("#{$v-img-path}top/about_bg.png") repeat-y;
+    background-size: contain;
     margin-top: -10rem;
   }
 
@@ -493,6 +496,7 @@
     }
 
     .ttl-icn {
+      display: block;
 
       @include mq(sp) {
         width: 38.8vw;
@@ -584,6 +588,7 @@
     }
 
     .sub-ttl-icn {
+      display: block;
       margin-bottom: 1rem;
 
       @include mq(sp) {
@@ -648,6 +653,7 @@
         position: relative;
         justify-content: space-between;
         z-index: 1;
+        padding: 0 1.333vw;
       }
     }
 
@@ -660,7 +666,7 @@
 
         @include mq(sp) {
           top: -2rem;
-          left: 0;
+          left: -1.333vw;
         }
 
         @include mq() {
@@ -680,7 +686,7 @@
 
         @include mq(sp) {
           top: -2rem;
-          right: 0;
+          right: -1.333vw;
         }
 
         @include mq() {
@@ -800,11 +806,12 @@
   .youtube-blk {
 
     @include mq(sp) {
-      margin-bottom: 13.333vw;
+      padding-bottom: 13.333vw;
     }
 
     @include mq() {
-      margin: 0 auto 9.5rem;
+      margin: 0 auto;
+      padding-bottom: 9.5rem;
       max-width: 1000px;
     }
 
@@ -1001,6 +1008,7 @@
     }
 
     .ttl-icn {
+      display: block;
 
       @include mq(sp) {
         width: 18.533vw;
@@ -1037,7 +1045,7 @@
 
     .merit-tile {
       @include mq(sp) {
-        padding-bottom: 24vw;
+        padding-bottom: 15.667vw;
       }
 
       @include mq() {
@@ -1208,9 +1216,16 @@
 }
 
 .cmn-white-bg {
-  background: url("#{$v-img-path}top/cmn_white_bg.png") repeat-y center;
-  background-size: 100% auto;
+  background: url("#{$v-img-path}top/cmn_white_bg.png") repeat-y;
   background-position: center top;
+
+  @include mq (sp) {
+    background-size: cover;
+  }
+
+  @include mq () {
+    background-size: contain;
+  }
 }
 
 .contact-sec {
@@ -1253,6 +1268,7 @@
     }
 
     .ttl-icn {
+      display: block;
       margin-bottom: 0.5rem;
 
       @include mq(sp) {
@@ -1281,16 +1297,17 @@
         position: absolute;
         bottom: 0;
         left: 50%;
-        width: 30px;
         background: $color06;
         content: "";
         transform: translateX(-50%);
 
         @include mq(sp) {
+          width: 4vw;
           height: 12vw;
         }
 
         @include mq() {
+          width: 30px;
           height: 80px;
         }
       }
@@ -1304,7 +1321,7 @@
       &.slide1 {
         .flow-img {
           @include mq(sp) {
-            top: -5.6vw;
+            top: -6.6vw;
             width: 23.2vw;
           }
         }
@@ -1346,7 +1363,7 @@
         .sub-ttl-icn {
           @include mq(sp) {
             img {
-              width: 6.133w;
+              width: 6.133vw;
             }
           }
         }
@@ -1355,7 +1372,7 @@
       &.slide4 {
         .flow-img {
           @include mq(sp) {
-            top: -4vw;
+            top: -5.5vw;
             width: 22.133vw;
           }
         }
@@ -1372,7 +1389,7 @@
       &.slide5 {
         .flow-img {
           @include mq(sp) {
-            top: -3.733vw;
+            top: -4.733vw;
             width: 23.6vw;
           }
         }
@@ -1388,10 +1405,16 @@
 
       .flow-slide-bdr {
         position: relative;
-        border: 5px solid $color04;
         box-sizing: border-box;
         background: $white;
         border-radius: 20px;
+        
+        @include mq(sp) {
+          border: 0.667vw solid $color04;
+        }
+        @include mq() {
+          border: 5px solid $color04;
+        }
       }
 
       .flow-sub-ttl {
@@ -1411,6 +1434,7 @@
         }
 
         .sub-ttl-icn {
+          display: block;
 
           @include mq(sp) {
             width: 10%;
@@ -1437,7 +1461,7 @@
         border-bottom-right-radius: 15px;
 
         @include mq(sp) {
-          padding: 4vw 5.333vw;
+          padding: 3vw 5.333vw;
           font-size: 3.733vw;
         }
 
@@ -1491,7 +1515,7 @@
   margin: 0 auto;
 
   @include mq(sp) {
-    padding: 0 5.333vw 15.333vw;
+    padding: 0 5.333vw 21.333vw;
   }
 
   @include mq() {
@@ -1510,6 +1534,7 @@
 
     @include mq(sp) {
       width: 100%;
+      margin-bottom: 10vw;
     }
 
     @include mq() {
@@ -1534,6 +1559,7 @@
         position: relative;
         align-items: center;
         box-sizing: border-box;
+        font-weight: 700;
 
         @include mq(sp) {
           line-height: 1.6;
@@ -1585,6 +1611,7 @@
         justify-content: center;
         align-items: center;
         color: $white;
+        font-weight: 700;
         border-radius: 100px;
 
         @include mq(sp) {

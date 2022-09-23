@@ -3,19 +3,20 @@ scroll
 ======================================================== */
 .totop-btn a {
   position: absolute;
-  top: 0;
   z-index: 99;
   color: $color01;
   font-weight: 700;
   text-decoration: none;
 
   @include mq(sp) {
+    top: -6vw;
     right: 5.333vw;
     width: 13.333vw;
     font-size: 2.933vw;
   }
 
   @include mq() {
+    top: 0;
     right: 0;
     width: 60px;
     font-size: 1.4rem;
